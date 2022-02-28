@@ -1,13 +1,14 @@
-import Navbar from './components/Navbar/Navbar';
 import './index.css';
-import React from "react"
 
-function App() {
-  return (
-    <div>
-      <Navbar/>
+const App = () => {
+  return ( 
+    <div className="container">
+      <div className="login">
+        <input type="text" placeholder="username" />
+        <button>Login</button>
+      </div>
     </div>
-  );
+   );
 }
-
+ 
 export default App;
