@@ -3,7 +3,7 @@ import "./card.css"
 const Card = () => {
     return ( 
         <div>
-            <h1>Na me be the card Components </h1>
+            <h6>Na me be the card Components </h6>
         </div>
      );
 }
