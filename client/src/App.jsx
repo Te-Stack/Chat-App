@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Navbar from './components/Navbar/Navbar';
 import './index.css';
 
 const App = () => {
@@ -8,11 +9,18 @@ const App = () => {
   // console.log(user)
   return ( 
     <div className="container">
-      <div className="login">
+      {user ? (
+        <>
+        <Navbar/>
+        <Card/>
+        </>
+      ) : (<div className="login">
         <input type="text" placeholder="username" onChange={(e)=> setUsername(e.target.value)} />
         <button onClick={()=>setUser(username)} >Login</button>
       </div>
-    </div>
+      )}
+      </div>
+      
    );
 }
  
