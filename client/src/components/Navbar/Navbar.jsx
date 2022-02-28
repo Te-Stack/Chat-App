@@ -5,7 +5,7 @@ const Navbar = () => {
         <div className="navbar">
             <span className="logo">Lama App</span>
             <div className="icons">
-                <div className="icons" >
+                <div className="icon" >
                     <img src={Notification} className="iconImg" alt="" />
                     <div className="counter">2</div>
                 </div>
