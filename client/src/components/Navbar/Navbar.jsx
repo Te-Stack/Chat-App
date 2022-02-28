@@ -9,7 +9,6 @@ const Navbar = () => {
                     <img src={Notification} className="iconImg" alt="" />
                     <div className="counter">2</div>
                 </div>
-
             </div>
         </div>
      );
