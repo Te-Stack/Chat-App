@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/navbar/Navbar'
+import Card from './components/card/Card'
 import './index.css';
 
 const App = () => {
