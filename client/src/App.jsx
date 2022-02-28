@@ -14,6 +14,9 @@ const App = () => {
         <>
         <Navbar/>
         <Card/>
+        <span className="username">
+          {user}
+        </span>
         </>
       ) : (<div className="login">
         <input type="text" placeholder="username" onChange={(e)=> setUsername(e.target.value)} />

@@ -4,6 +4,12 @@
    box-sizing: border-box;
 }
 
+.container{
+   width: 50vh;
+   border-radius: 5px;
+   border: 0.5px solid lightseagreen;
+}
+
 body{
    height: 100vh;
    display: flex;
@@ -18,12 +24,13 @@ body{
    align-items: center;
 }
 
+
 input{
    width: 70%;
    padding: 10px;
-   margin-bottom: 20px;
-   
+   margin-bottom: 20px; 
 }
+
 
 button{
    width: 60%;
@@ -32,4 +39,14 @@ button{
    color: white;
    border: none;
    border-radius: 5px;
+}
+
+.username{
+   font-weight: bold;
+   color: lightseagreen;
+   position: absolute;
+   top: 15px;
+   right: 20px;
+
+
 }

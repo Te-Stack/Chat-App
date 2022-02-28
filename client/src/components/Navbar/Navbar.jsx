@@ -1,8 +1,16 @@
 import "./navbar.css"
+import Notification from "../../img/notification.svg"
 const Navbar = () => {
     return ( 
         <div className="navbar">
-            <h1>Hello</h1>
+            <span className="logo">Lama App</span>
+            <div className="icons">
+                <div className="icons" >
+                    <img src={Notification} className="iconImg" alt="" />
+                    <div className="counter">2</div>
+                </div>
+
+            </div>
         </div>
      );
 }
