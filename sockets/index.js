@@ -7,10 +7,10 @@ const io = new Server({
  });
 
 io.on("connection", (socket) => {
-  console.log("someone has connected!");
-
+    io.emit("firstEvent", "Hello this is test")
+  
   socket.on("disconnect", ()=>{
-      console.log("someone has left")
+      
   })
 });
 

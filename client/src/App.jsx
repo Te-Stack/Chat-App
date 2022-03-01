@@ -11,7 +11,9 @@ const App = () => {
 
   useEffect(()=>{
     const socket = io("http://localhost:5000");
-    console.log(socket)
+    console.log(socket.on("firstEvent",(msg)=>{
+      console.log(msg)
+    }))
   },[])
 
   // console.log(user)
