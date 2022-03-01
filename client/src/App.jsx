@@ -22,9 +22,9 @@ const App = () => {
     <div className="container">
       {user ? (
         <>
-        <Navbar/>
+        <Navbar socket={socket} />
         {posts.map((post)=>(
-          <Card key={post.id} post={post} />
+          <Card key={post.id} post={post} socket={socket} user={user} />
         ))}
         
         <span className="username">
