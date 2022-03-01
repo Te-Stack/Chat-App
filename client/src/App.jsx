@@ -8,15 +8,16 @@ import {io} from "socket.io-client"
 const App = () => {
   const [username,setUsername] = useState("")
   const [user,setUser] = useState("")
+  const [socket, setSocket] = useState(null)
 
   useEffect(()=>{
-    const socket = io("http://localhost:5000");
-    console.log(socket.on("firstEvent",(msg)=>{
-      console.log(msg)
-    }))
+    setSocket(io("http://localhost:5000"))
+    
   },[])
 
-  // console.log(user)
+  useEffect(()=>{
+    socket.emit("newUser",user);
+  },[socket, user])
   return ( 
     <div className="container">
       {user ? (
