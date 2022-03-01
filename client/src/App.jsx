@@ -16,7 +16,7 @@ const App = () => {
   },[])
 
   useEffect(()=>{
-    socket.emit("newUser",user);
+    socket?.emit("newUser",user);
   },[socket, user])
   return ( 
     <div className="container">
