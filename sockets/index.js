@@ -18,7 +18,7 @@ const removeUser = (socketId) =>{
  
 const getUser = (username) => {
     return onlineUsers.find((user)=>user.username === username);
-} 
+}  
 
 
 io.on("connection", (socket) => {
