@@ -15,16 +15,16 @@ const addNewUser = (username, socketId) =>{
 const removeUser = (socketId) =>{
     onlineUsers = onlineUsers.filter((user)=> user.socketId !== socketId)
 };
-
+ 
 const getUser = (username) => {
-    return onlineUsers.find(user=>user.username === username);
-}
+    return onlineUsers.find((user)=>user.username === username);
+} 
 
 
 io.on("connection", (socket) => {
     socket.on("newUser", (username)=>{
         addNewUser(username, socket.id)
-    })
+    }) 
 
     socket.on("sendNotification",({senderName,recieverName,type})=>{
         const reciever = getUser(recieverName)
