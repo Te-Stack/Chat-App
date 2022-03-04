@@ -18,7 +18,7 @@ const Navbar = ({socket}) => {
     console.log(notifications)
     return ( 
         <div className="navbar">
-            <span className="logo">Chat App</span>
+            <span className="logo">React Chat App</span>
             <div className="icons">
                 <div className="icon" >
                     <img src={Notification} className="iconImg" alt="" />
