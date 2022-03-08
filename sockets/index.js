@@ -29,7 +29,7 @@ io.on("connection", (socket) => {
     socket.on("sendNotification",({senderName,recieverName,type})=>{
         const reciever = getUser(recieverName)
         io.to(reciever.socketId).emit("getNotification", {
-            senderName, 
+            senderName,  
             type
         })
     })
