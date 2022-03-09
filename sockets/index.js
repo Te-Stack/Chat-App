@@ -34,13 +34,13 @@ io.on("connection", (socket) => {
         })
     })
 
-    socket.on("sendText", ({ senderName, receiverName, text }) => {
-        const receiver = getUser(receiverName);
-        io.to(receiver.socketId).emit("getText", {
-          senderName,
-          text,
-        });
-      });
+    // socket.on("sendText", ({ senderName, receiverName, text }) => {
+    //     const receiver = getUser(receiverName);
+    //     io.to(receiver.socketId).emit("getText", {
+    //       senderName,
+    //       text,
+    //     }); 
+    //   });
    
   socket.on("disconnect", ()=>{
       
