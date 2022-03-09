@@ -38,13 +38,25 @@ const Navbar = ({socket}) => {
             </span>
         )
     }
+
+    const handleRead=()=>{
+        setNotifications([])
+        setOpen(false)
+    }
+
+
+
     return ( 
         <div className="navbar">
             <span className="logo">React Chat App</span>
             <div className="icons">
                 <div className="icon" onClick={()=>setOpen(!open)}>
                     <img src={Notification} className="iconImg" alt="" />
+                    {
+                        notifications.length >0 && 
+                    
                     <div className="counter">{notifications.length}</div>
+                    }
                 </div>
                 <div className="icon" onClick={()=>setOpen(!open)} >
                     <img src={Message} className="iconImg" alt="" />
@@ -58,7 +70,7 @@ const Navbar = ({socket}) => {
             {open && (
             <div className="notifications">
                 {notifications.map((n)=>displayNotification(n))}
-                <button className="nButton">Mark as read</button>
+                <button className="nButton" onClick={handleRead}>Mark as read</button>
             </div>
             )}
         </div>
