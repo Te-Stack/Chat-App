@@ -5,7 +5,11 @@
   "main": "index.js",
   "type":"module",
   "scripts": {
-    "start":"nodemon idex.js"
+    "start":"nodemon idex.js",
+    "client-install": "cd client && npm install",
+    "client": "npm start --prefix client",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run client-install && npm run build"
   },
   "keywords": [],
   "author": "",
