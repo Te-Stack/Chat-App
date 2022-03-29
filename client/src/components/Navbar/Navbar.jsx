@@ -63,7 +63,7 @@ const Navbar = ({socket}) => {
                     
                 </div>
                 <div className="icon" onClick={()=>setOpen(!open)} >
-                    <img src={Settings} className="iconImg" alt="" />
+                    <img src={Settings} className="iconImg" alt="settings" />
                     
                 </div>
             </div>
